@@ -9,9 +9,13 @@
  */
 angular.module('ngDaterangepickerCompareApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.input = {
+      'dateRange' : {
+        'startDate': new Date(2014, 5, 1),
+        'endDate': new Date(2014, 5, 30),
+        'startDateCompare': null,
+        'endDateCompare': null,
+        'compare' : false
+      }
+    };
   });
