@@ -1,17 +1,12 @@
 {
   "name": "ng-daterangepicker-compare",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "main": "./src/ng-daterangepicker-compare.js",
   "dependencies": {
-    "angular": "1.2.16",
-    "json3": "~3.3.1",
-    "es5-shim": "~3.1.0",
-    "bootstrap-sass-official": "~3.2.0",
-    "daterangepicker-compare": "https://github.com/chihab/daterangepicker-compare.git",
-    "moment": "~2.8.1"
+    "angular": ">= 1.0.7",
+    "daterangepicker-compare": "https://github.com/chihab/daterangepicker-compare.git"
   },
   "devDependencies": {
-    "angular-mocks": "1.2.16",
-    "angular-scenario": "1.2.16"
-  },
-  "appPath": "app"
+    "angular-mocks": ">= 1.0.7"
+  }
 }

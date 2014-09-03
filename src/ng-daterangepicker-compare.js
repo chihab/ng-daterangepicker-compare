@@ -1,6 +1,6 @@
 (function (angular) {
   'use strict';
-  angular.module('ngDateRange', []).directive('dateCompare', function ($compile, $parse) {
+  angular.module('ngDrpCompare', []).directive('drpCompare', function () {
     return {
       restrict: 'E',
       require: '?ngModel',
