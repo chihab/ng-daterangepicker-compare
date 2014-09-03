@@ -1,25 +1,5 @@
 (function (angular) {
   'use strict';
-  angular.module('ngJqueryPlugin', [])
-    .directive('jqueryPlugin', function ($compile, $parse) {
-      return {
-        restrict: 'E',
-        require: '?ngModel',
-        link: function ($scope, $element, $attributes, ngModel) {
-          if (ngModel === null) return;
-          $scope.$watch($attributes.ngModel, function (newValue, oldValue) {
-            $element.data('jqueryPlugin').updateJQueryPluginUI();
-          });
-          $element.jqueryPluginConstructor({}, function (valueFromCallBack) {
-            $scope.$apply(function () {
-              ngModel.$setViewValue({ value: valueFromCallBack});
-              ngModel.$render();
-            });
-          });
-        }
-      };
-    });
-
   angular.module('ngDateRange', []).directive('dateCompare', function ($compile, $parse) {
     return {
       restrict: 'E',
