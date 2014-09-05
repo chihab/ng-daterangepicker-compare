@@ -1,7 +1,7 @@
 {
   "name": "ng-daterangepicker-compare",
   "version": "0.0.1",
-  "main": "./src/ng-daterangepicker-compare.js",
+  "main": "./dist/ng-daterangepicker-compare.min.js",
   "dependencies": {
     "angular": ">= 1.0.7",
     "daterangepicker-compare": "https://github.com/chihab/daterangepicker-compare.git"

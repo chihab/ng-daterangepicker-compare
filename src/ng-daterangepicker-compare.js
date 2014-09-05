@@ -11,22 +11,25 @@
         var init = true;
         var updateFromPlugin = false;
         options.format = $attributes.format || 'Y-mm-dd';
+        options.opens = $attributes.opens || 'left';
 
         $scope.$watch($attributes.ngModel, function (newValue) {
-          if (updateFromPlugin) {
-            updateFromPlugin = false;
-            return;
+          if (newValue) {
+            if (updateFromPlugin) {
+              updateFromPlugin = false;
+              return;
+            }
+            $element.data('daterangepicker').updatePickerInput(
+              newValue.startDate,
+              newValue.endDate,
+              newValue.startDateCompare,
+              newValue.endDateCompare,
+              newValue.compare);
           }
-          $element.data('daterangepicker').updatePickerInput(
-            newValue.startDate,
-            newValue.endDate,
-            newValue.startDateCompare,
-            newValue.endDateCompare,
-            newValue.compare);
         }, true);
 
         $element.daterangepicker(
-          {opens: 'left', format: options.format, compare: options.compare},
+          {opens: options.opens, format: options.format, compare: options.compare},
           function(start, end, cmpStart, cmpEnd, compare){
             if (init)
               return;
